@@ -146,7 +146,7 @@ select {
 /* цвет кнопок */
 .btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled).active:hover,
  .btn-dark:hover, .btn-dark {
-    background-color: blue; /* #2c2a29 */
+    background-color: brown; /* #2c2a29 */
     border-color: #2c2a29;
 }
 
