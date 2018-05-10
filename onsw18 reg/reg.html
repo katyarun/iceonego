@@ -617,7 +617,24 @@
       }
     }
 
-    
+    $("[data-fancybox]").fancybox({
+      toolbar: "auto",
+      buttons: [
+        "close"
+      ],
+      protect: true,
+      image: {
+        preload: true,
+      },
+      animationEffect: "zoom-in-out",
+      mobile: {
+        animationEffect: "zoom-in-out",
+        touch: false,
+        dblclickContent: false,
+        smallBtn: true,
+      },
+      clickContent: "close",
+    });
     
     function showTshirt($input) {
       var thsirtDiv = $($input).parents(".row").next(".row");
@@ -698,7 +715,12 @@
     // }); 
     
     $(document).ready(function() {
-      
+      $(".birthday").inputmask({
+        showMaskOnHover: false
+      });
+      $("[name='phone']").inputmask({
+        showMaskOnHover: false
+      });
 
       removeRequiredAttr();
 
