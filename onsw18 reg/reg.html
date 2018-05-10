@@ -1,1 +1,1090 @@
-<!DOCTYPE html><link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css rel=stylesheet><link href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.4/jquery.fancybox.min.css rel=stylesheet><style>@import url(https://fonts.googleapis.com/css?family=Open+Sans:light,normal&subset=cyrillic);h1,h4,h5{font-family:"Open Sans",sans-serif}@font-face{font-family:Ionicons;src:url(https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.eot?v=2.0.1);src:url(https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.eot?v=2.0.1#iefix) format("embedded-opentype"),url(https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.ttf?v=2.0.1) format("truetype"),url(https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.woff?v=2.0.1) format("woff"),url(https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.svg?v=2.0.1#Ionicons) format("svg");font-weight:400;font-style:normal}.ion-ios-help-outline:before{content:"\f445"}.ion-ios-help-outline{display:inline-block;font-family:Ionicons;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;text-rendering:auto;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (max-width:450px){.container{justify-content:center!important}}#thankyou_message,.container,.form-control,.input-group-sm{font-family:"Open Sans",sans-serif!important;font-size:13px!important}.container{max-width:400px!important}.custom-select.is-valid,.form-control.is-valid,.was-validated .custom-select:valid,.was-validated .form-control:valid,.was-validated .form-control:valid:focus{border-color:#ced4da}.custom-select.is-invalid,.form-control.is-invalid,.was-validated .custom-select:invalid,.was-validated .form-control:invalid{border-color:#dc3545!important;-moz-border-radius:none;-webkit-border-radius:none;-khtml-border-radius:none}.btn.focus,.btn:focus,.fancybox-button:focus,.form-control:focus,a:focus{outline:0;box-shadow:none!important}.icon{font-size:13px;padding-right:0;padding-left:0}.col1{width:300px}#button{width:170px}.sumInput{max-width:75px}.form-group{margin-bottom:.315rem}select.form-control-sm{height:28px!important}select::-ms-expand{display:none}select{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none}#conditions{color:#9570ba}#conditions:hover{color:#9570ba}.icon{color:#212529}input{color:#212529!important}select{color:#6c757d!important}.text15{font-size:15px!important;color:#9570ba!important}.icon{font-size:22px}.btn-dark,.btn-dark:hover,.btn-outline-dark:not(:disabled):not(.disabled).active,.btn-outline-dark:not(:disabled):not(.disabled).active:hover{background-color:#2c2a29;border-color:#2c2a29}.btn-outline-dark:hover{color:#2c2a29;background-color:#fff;border-color:#9570ba}.btn-sm{font-size:13px}body{background-color:transparent!important}.form-check-input{margin-top:0;position:static}label{vertical-align:middle}.form-control:focus{border-bottom-color:#212529}input:-ms-input-placeholder{color:#6c757d!important}.form-check-label,.was-validated .form-check-input:valid+.form-check-label{color:#6c757d}.was-validated .form-check-input:valid:checked+.form-check-label,input:checked+label{color:#212529}</style><body><script>function removeRequiredAttr(){var e=$("#estafetaDiv input[required], #estafetaDiv select[required]");for(i=0;i<e.length;i++)e[i].removeAttribute("required"),e[i].classList.add("required")}$(document).ready(function(){removeRequiredAttr()})</script><div class="container d-flex justify-content-start ml-0"><form action=https://money.yandex.ru/quickpay/confirm.xml class=needs-validation id=gform method=POST novalidate target=_blank><div class=form-group><div class="row justify-content-center d-flex"id=choiceRow><div class="justify-content-center d-flex col1"><div class="btn-group btn-group-toggle"data-toggle=buttons><label class="rounded-0 btn btn-sm btn-outline-dark active mr-2 px-4"name=labelForChoice><input name=choice type=radio value=personal onclick=personal() autocomplete=off checked> Лично</label> <label class="rounded-0 btn btn-sm btn-outline-dark ml-2 px-3"name=labelForChoice><input name=choice type=radio value=estafette onclick=estafeta() autocomplete=off> Эстафета</label></div></div></div><div class="row justify-content-center pt-4"id=nameRow1><div class="col col1"><div class="form-group input-group-sm"><input name=name class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Имя><div class=invalid-feedback>Пожалуйста, укажите своё имя</div></div></div></div><div class="row justify-content-center"id=lastnameRow1><div class="col col1"><div class="form-group input-group-sm"><input name=surname class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Фамилия><div class=invalid-feedback>Пожалуйста, укажите свою фамилию</div></div></div></div><div class="row justify-content-center"id=birthdayRow1><div class="col col1"><div class="form-group input-group-sm"><input name=birthday class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput birthday"required placeholder="Дата рождения"type=tel data-inputmask-alias=datetime data-inputmask-inputformat=dd/mm/yyyy data-inputmask-max=01/01/2001 data-inputmask-min=01/01/1920><div class=invalid-feedback>Пожалуйста, укажите свою дату рождения</div></div></div></div><div class="row justify-content-center"id=cityRow1><div class="col col1"><div class="form-group input-group-sm"><input name=city class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Город><div class=invalid-feedback>Пожалуйста, укажите свой город</div></div></div></div><div class="row justify-content-center"id=countryRow1><div class="col col1"><div class=form-group><select class="rounded-0 border-left-0 border-right-0 border-top-0 form-control form-control-sm country"name=country onchange=changeSelectColor(this) required id=blya><option value="">Страна<option value=Russia>Russia</select><div class=invalid-feedback>Пожалуйста, выберите страну</div></div></div></div><div class="row justify-content-center pt-2"id=sexRow1><div class="col col1"><div class=form-inline><div class="form-check form-check-inline"><input name=radioGroup class=form-check-input required type=radio id=radioM1 value=Мужской onclick='changeTshirtToMens("tshirtRow1")'> <label class="form-check-label pr-3"for=radioM1>Мужской</label> <input name=radioGroup class=form-check-input id=radioF1 type=radio value=Женский onclick='changeTshirtToWomens("tshirtRow1")'> <label class=form-check-label for=radioF1>Женский</label></div></div></div></div><div class="row justify-content-center pt-2"id=tshirtCheckboxRow1><div class="col col1"><div class=form-check><input name=tshirt class=form-check-input id=checkTshirt type=checkbox value=tshirt onclick=showTshirt(this)> <label class="form-check-label pl-1"for=checkTshirt>Добавить футболку</label></div></div></div><div class="row justify-content-center pt-2 d-none"id=tshirtRow1><div class="col col1"><div class=row><div class=col><a href="https://static.wixstatic.com/media/bad037_3c5ff974fbcd4051aae17fad76e9f4d6~mv2.png?dn=M_print_grey.png"class=fancybox data-fancybox><img alt="OnegoSwim Tshirt"class=img-thumbnail src="https://static.wixstatic.com/media/bad037_9a8c04db49f943b6a92000d0ef67e95e~mv2.png?dn=M_print_grey_small.png"></a></div><div class=col><div class="row h-50"><div class="form-group d-flex pr-0 w-100"><select class="rounded-0 border-left-0 border-right-0 border-top-0 form-control form-control-sm"name=size onchange=changeSelectColor(this)><option value="">Размер<option value=S>S<option value=M>M<option value=L>L</select> <a href="https://static.wixstatic.com/media/bad037_291e071901474f82ae060dfd21e0e662~mv2.jpg?dn=sizeChartM.jpg"class="fancybox pl-2 pr-3"data-fancybox><i class="icon ion-ios-help-outline"></i></a></div></div><div class="row d-flex align-items-center h-50"><span class="font-weight-light ml-1 text-secondary"style=font-size:11px>100% Organic ring-spun<br>combed cotton<br><span>155</span> GSM</span></div></div></div></div></div><div class=d-none id=estafetaDiv><div class="row justify-content-center pt-4"id=nameRow2><div class="col col1"><div class="form-group input-group-sm"><input name=name2 class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Имя><div class=invalid-feedback>Пожалуйста, укажите своё имя</div></div></div></div><div class="row justify-content-center"id=lastnameRow2><div class="col col1"><div class="form-group input-group-sm"><input name=surname2 class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Фамилия><div class=invalid-feedback>Пожалуйста, укажите свою фамилию</div></div></div></div><div class="row justify-content-center"id=birthdayRow2><div class="col col1"><div class="form-group input-group-sm"><input name=birthday2 class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput birthday"required placeholder="Дата рождения"type=tel data-inputmask-alias=datetime data-inputmask-inputformat=dd/mm/yyyy data-inputmask-max=01/01/2001 data-inputmask-min=01/01/1920><div class=invalid-feedback>Пожалуйста, укажите свою дату рождения</div></div></div></div><div class="row justify-content-center"id=cityRow2><div class="col col1"><div class="form-group input-group-sm"><input name=city2 class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Город><div class=invalid-feedback>Пожалуйста, укажите свой город</div></div></div></div><div class="row justify-content-center"id=countryRow2><div class="col col1"><div class=form-group><select class="rounded-0 border-left-0 border-right-0 border-top-0 form-control form-control-sm country"name=country2 onchange=changeSelectColor(this) required><option value="">Страна<option value=Russia>Russia</select><div class=invalid-feedback>Пожалуйста, выберите страну</div></div></div></div><div class="row justify-content-center pt-2"id=sexRow2><div class="col col1"><div class=form-inline><div class="form-check form-check-inline"><input name=radioGroup2 class=form-check-input required type=radio id=radioM2 value=Мужской onclick='changeTshirtToMens("tshirtRow2")'> <label class="form-check-label pr-3"for=radioM2>Мужской</label> <input name=radioGroup2 class=form-check-input id=radioF2 type=radio value=Женский onclick='changeTshirtToWomens("tshirtRow2")'> <label class=form-check-label for=radioF2>Женский</label></div></div></div></div><div class="row justify-content-center pt-2"id=tshirtCheckboxRow2><div class="col col1"><div class=form-check><input name=tshirt2 class=form-check-input id=checkTshirt2 type=checkbox value=tshirt onclick=showTshirt(this)> <label class="form-check-label pl-1"for=checkTshirt2>Добавить футболку</label></div></div></div><div class="row justify-content-center pt-2 d-none"id=tshirtRow2><div class="col col1"><div class=row><div class=col><a href="https://static.wixstatic.com/media/bad037_3c5ff974fbcd4051aae17fad76e9f4d6~mv2.png?dn=M_print_grey.png"class=fancybox data-fancybox><img alt="OnegoSwim Tshirt"class=img-thumbnail src="https://static.wixstatic.com/media/bad037_9a8c04db49f943b6a92000d0ef67e95e~mv2.png?dn=M_print_grey_small.png"></a></div><div class=col><div class="row h-50"><div class="form-group d-flex pr-0 w-100"><select class="rounded-0 border-left-0 border-right-0 border-top-0 form-control form-control-sm"name=size2 onchange=changeSelectColor(this)><option value="">Размер<option value=S>S<option value=M>M<option value=L>L</select> <a href="https://static.wixstatic.com/media/bad037_291e071901474f82ae060dfd21e0e662~mv2.jpg?dn=sizeChartM.jpg"class="fancybox pl-2 pr-3"data-fancybox><i class="icon ion-ios-help-outline"></i></a></div></div><div class="row d-flex align-items-center h-50"><span class="font-weight-light ml-1 text-secondary"style=font-size:11px>100% Organic ring-spun<br>combed cotton<br><span>155</span> GSM</span></div></div></div></div></div></div><div class="row justify-content-center mt-4"id=emailRow><div class="col col1"><div class="form-group input-group-sm"><input name=email class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Email type=email id=email onblur=createLabel()><div class=invalid-feedback>Пожалуйста, укажите email</div></div></div></div><div class="row justify-content-center"id=phoneRow><div class="col col1"><div class="form-group input-group-sm"><input name=phone class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"required placeholder=Телефон type=tel data-inputmask="'alias': 'phone'"><div class=invalid-feedback>Пожалуйста, укажите свой телефон</div></div></div></div><div class="row justify-content-center"id=clubRow><div class="col col1"><div class="form-group input-group-sm"><input name=club class="rounded-0 border-left-0 border-right-0 border-top-0 form-control simpleInput"placeholder=Клуб></div></div></div><div class="row justify-content-center mb-3"id=finishTimeRow><div class="col col1"><div class=form-group><select class="rounded-0 border-left-0 border-right-0 border-top-0 form-control form-control-sm"name=finishTime onchange=changeSelectColor(this) required><option value="">Finish time distance<option value="17 мин и менее">17 мин и менее<option value="17-18 минут">17-18 минут<option value="18-19 минут">18-19 минут<option value="19-20 минут">19-20 минут<option value="20-21 минута">20-21 минута<option value="21-22 минуты">21-22 минуты<option value="22-23 минуты">22-23 минуты</select><div class=invalid-feedback>Пожалуйста, выберите предполагаемое время финиша</div></div></div></div><div class="row justify-content-center pt-4"id=conditionsRow><div class="col col1 pr-0"><div class=form-check><input name=checkCond class=form-check-input required type=checkbox id=checkCond value=accepted> <label class="form-check-label pl-1"for=checkCond>С <a href=https://www.iceonego.ru/onegoswim-conditions id=conditions target=_blank>Положением</a> о заплыве ознакомлен<span></span></label></div></div></div><div class="row justify-content-center mt-3"id=sumRow><div class="col col1"><div class="form-group d-flex pr-0 justify-content-end mb-0"><div class="input-group sumInput"><input name=sum class="form-control bg-white border-0 font-weight-bold pb-0 pr-1 text-right text15"id=sum value=1000 readonly onfocus=this.form.paymentType.focus()><div class=input-group-append><span class="bg-white border-0 pb-0 text15 input-group-text px-0">₽</span></div></div></div></div></div><div class="row justify-content-center mb-3"id=paymentOptionsRow><div class="col col1"><div class=form-group><select class="rounded-0 border-left-0 border-right-0 border-top-0 form-control form-control-sm"name=paymentType onchange=changeSelectColor(this) required><option value="">Способ оплаты<option value=AC>Банковской картой<option value=PC>Яндекс.Деньгами</select><div class=invalid-feedback>Пожалуйста, выберите способ оплаты</div></div></div></div><div name=hiddenFields><input name=label type=hidden value=personal id=labelId> <input name=receiver type=hidden value=410014093370883> <input name=quickpay-form type=hidden value=shop> <input name=targets type=hidden value=OnegoSwim2018> <input name=need-email type=hidden value=false> <input name=successURL type=hidden value=https://www.iceonego.ru/dare></div><div class="row justify-content-center d-flex"id=buttonRow><div class=col><button class="rounded-0 btn btn-sm btn-block btn-dark mx-auto"id=button type=submit>Оплатить</button></div></div></div></form></div><div class=ml-2 id=thankyou_message style=display:none;max-width:390px><p>Если вы видите это сообщение и НЕ были перенаправлены на страницу с оплатой, то напишите, пожалуйста, об этом на hello@iceonego.ru. Спасибо за понимание!</div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.4/jquery.fancybox.min.js></script><script src=https://cdn.rawgit.com/RobinHerbots/Inputmask/4.x/dist/min/inputmask/inputmask.min.js></script><script src=https://cdn.rawgit.com/RobinHerbots/Inputmask/4.x/dist/min/inputmask/jquery.inputmask.min.js></script><script src=https://cdn.rawgit.com/RobinHerbots/Inputmask/4.x/dist/min/inputmask/inputmask.date.extensions.min.js></script><script src=https://cdn.rawgit.com/RobinHerbots/Inputmask/4.x/dist/min/inputmask/inputmask.phone.extensions.min.js></script><script src=https://cdn.rawgit.com/RobinHerbots/Inputmask/4.x/dist/min/inputmask/phone-codes/phone.min.js></script><script>var price=1e3,tshirtPrice=1300,estafetaPrice=2e3;function changeTshirtToWomens(a){var e=$("#"+a+" a");$("#"+a+" img")[0].src="https://static.wixstatic.com/media/bad037_e47594f0a5244a82948ab47912745097~mv2.png?dn=W_print_grey_small.png",e[0].href="https://static.wixstatic.com/media/bad037_6b53949a7d364ed485ab85e5d97fab14~mv2.png?dn=W_print_grey.png",e[1].href="https://static.wixstatic.com/media/bad037_d5ce9737fab74ecda0aa6d08569339ad~mv2.jpg?dn=sizeChartF.jpg";var n=$("#"+a+" option");"XS"!=n[1].value&&$("<option value='XS'>XS</option>").insertAfter(n[0]),"XL"==n.last()[0].value&&$(n).last().remove()}function changeTshirtToMens(a){var e=$("#"+a+" a");$("#"+a+" img")[0].src="https://static.wixstatic.com/media/bad037_9a8c04db49f943b6a92000d0ef67e95e~mv2.png?dn=M_print_grey_small.png",e[0].href="https://static.wixstatic.com/media/bad037_3c5ff974fbcd4051aae17fad76e9f4d6~mv2.png?dn=M_print_grey.png",e[1].href="https://static.wixstatic.com/media/bad037_291e071901474f82ae060dfd21e0e662~mv2.jpg?dn=sizeChartM.jpg";var n=$("#"+a+" option");"XS"===n[1].value&&$(n[1]).remove(),"XL"!=n.last()[0].value&&$("<option value='XL'>XL</option>").insertAfter(n.last())}function changeSelectColor(a){""!==a.value?$(a).attr("style","color:#212529 !important;"):$(a).attr("style","color:none !important;")}function showTshirt(a){var e=$(a).parents(".row").next(".row");a.checked?($(e).removeClass("d-none"),e.find("select").attr("required",!0),$("#sum")[0].value=parseInt($("#sum")[0].value)+tshirtPrice):($(e).addClass("d-none"),e.find("select").attr("required",!1),$("#sum")[0].value=parseInt($("#sum")[0].value)-tshirtPrice)}function returnRequireAttr(){var a=$("#estafetaDiv .required");for(i=0;i<a.length;i++)a[i].setAttribute("required",!0),a[i].classList.remove("required")}function estafeta(){var a=document.getElementsByName("labelForChoice");if(!1===a[1].classList.contains("active")){a[0].classList.remove("active"),a[1].classList.add("active"),document.getElementById("estafetaDiv").classList.remove("d-none"),document.getElementById("conditionsRow").getElementsByTagName("span")[0].innerText="ы";var e=document.getElementById("sum");e.value=e.value-price+estafetaPrice,returnRequireAttr(),$("#finishTimeRow").addClass("d-none")}}function personal(){var a=document.getElementsByName("labelForChoice");if(!1===a[0].classList.contains("active")){document.getElementById("estafetaDiv").classList.add("d-none"),a[1].classList.remove("active"),a[0].classList.add("active"),document.getElementById("conditionsRow").getElementsByTagName("span")[0].innerText="";var e=document.getElementById("sum");e.value=e.value-estafetaPrice+price,document.querySelectorAll("#estafetaDiv input[required], #estafetaDiv select[required]"),removeRequiredAttr();var n=document.getElementById("tshirtCheckboxRow2").getElementsByTagName("input")[0];n.checked&&n.click(),$("#finishTimeRow").removeClass("d-none")}}function createLabel(){var a=document.getElementById("email");document.getElementById("labelId").value="ONSW18_"+a.value}function validateHuman(a){if(a)return console.log("Robot Detected!"),!0;console.log("Welcome Human!")}function getFormData(){var a=document.getElementById("gform"),t=a.elements,e=Object.keys(t).map(function(a){return void 0!==t[a].name?t[a].name:0<t[a].length?t[a].item(0).name:void 0}).filter(function(a,e,n){return n.indexOf(a)==e&&a}),i={};return e.forEach(function(a){i[a]=t[a].value;var e="";if("checkbox"===t[a].type)e=e+t[a].checked+", ",i[a]=e.slice(0,-2);else if(t[a].length)for(var n=0;n<t[a].length;n++)t[a].item(n).checked&&(e=e+t[a].item(n).value+", ",i[a]=e.slice(0,-2))}),i.formDataNameOrder=JSON.stringify(e),i.formGoogleSheetName=a.dataset.sheet||"responses",i.formGoogleSendEmail=a.dataset.email||"",console.log(i),i}function handleFormSubmit(a){a.preventDefault();var e=getFormData();if(!document.getElementById("gform").checkValidity())return!1;document.getElementById("gform").submit();var n=new XMLHttpRequest;n.open("POST","https://script.google.com/macros/s/AKfycbz4hjJyR_LH0pu4NUHEc_lAnUgPcYXMHY8daAZBY5HQuZt11S0L/exec"),n.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){if(console.log(n.status,n.statusText),console.log(n.responseText),document.getElementById("gform").style.display="none",document.getElementById("thankyou_message").style.display="block",4==this.readyState&&200==this.status)this.responseText};var t=Object.keys(e).map(function(a){return encodeURIComponent(a)+"="+encodeURIComponent(e[a])}).join("&");n.send(t)}function loaded(){console.log("contact form submission handler loaded successfully"),document.getElementById("gform").addEventListener("submit",handleFormSubmit,!1)}$("[data-fancybox]").fancybox({toolbar:"auto",buttons:["close"],protect:!0,image:{preload:!0},animationEffect:"zoom-in-out",mobile:{animationEffect:"zoom-in-out",touch:!1,dblclickContent:!1,smallBtn:!0},clickContent:"close"}),$(document).ready(function(){$(".birthday").inputmask({showMaskOnHover:!1}),$("[name='phone']").inputmask({showMaskOnHover:!1});var a=document.getElementsByClassName("country"),e={AF:"Afghanistan",AX:"Åland Islands",AL:"Albania",DZ:"Algeria",AS:"American Samoa",AD:"Andorra",AO:"Angola",AI:"Anguilla",AQ:"Antarctica",AG:"Antigua & Barbuda",AR:"Argentina",AM:"Armenia",AW:"Aruba",AC:"Ascension Island",AU:"Australia",AT:"Austria",AZ:"Azerbaijan",BS:"Bahamas",BH:"Bahrain",BD:"Bangladesh",BB:"Barbados",BY:"Belarus",BE:"Belgium",BZ:"Belize",BJ:"Benin",BM:"Bermuda",BT:"Bhutan",BO:"Bolivia",BA:"Bosnia & Herzegovina",BW:"Botswana",BR:"Brazil",IO:"British Indian Ocean Territory",VG:"British Virgin Islands",BN:"Brunei",BG:"Bulgaria",BF:"Burkina Faso",BI:"Burundi",KH:"Cambodia",CM:"Cameroon",CA:"Canada",IC:"Canary Islands",CV:"Cape Verde",BQ:"Caribbean Netherlands",KY:"Cayman Islands",CF:"Central African Republic",EA:"Ceuta & Melilla",TD:"Chad",CL:"Chile",CN:"China",CX:"Christmas Island",CC:"Cocos (Keeling) Islands",CO:"Colombia",KM:"Comoros",CG:"Congo - Brazzaville",CD:"Congo - Kinshasa",CK:"Cook Islands",CR:"Costa Rica",CI:"Côte d’Ivoire",HR:"Croatia",CU:"Cuba",CW:"Curaçao",CY:"Cyprus",CZ:"Czechia",DK:"Denmark",DG:"Diego Garcia",DJ:"Djibouti",DM:"Dominica",DO:"Dominican Republic",EC:"Ecuador",EG:"Egypt",SV:"El Salvador",GQ:"Equatorial Guinea",ER:"Eritrea",EE:"Estonia",ET:"Ethiopia",EZ:"Eurozone",FK:"Falkland Islands",FO:"Faroe Islands",FJ:"Fiji",FI:"Finland",FR:"France",GF:"French Guiana",PF:"French Polynesia",TF:"French Southern Territories",GA:"Gabon",GM:"Gambia",GE:"Georgia",DE:"Germany",GH:"Ghana",GI:"Gibraltar",GR:"Greece",GL:"Greenland",GD:"Grenada",GP:"Guadeloupe",GU:"Guam",GT:"Guatemala",GG:"Guernsey",GN:"Guinea",GW:"Guinea-Bissau",GY:"Guyana",HT:"Haiti",HN:"Honduras",HK:"Hong Kong SAR China",HU:"Hungary",IS:"Iceland",IN:"India",ID:"Indonesia",IR:"Iran",IQ:"Iraq",IE:"Ireland",IM:"Isle of Man",IL:"Israel",IT:"Italy",JM:"Jamaica",JP:"Japan",JE:"Jersey",JO:"Jordan",KZ:"Kazakhstan",KE:"Kenya",KI:"Kiribati",XK:"Kosovo",KW:"Kuwait",KG:"Kyrgyzstan",LA:"Laos",LV:"Latvia",LB:"Lebanon",LS:"Lesotho",LR:"Liberia",LY:"Libya",LI:"Liechtenstein",LT:"Lithuania",LU:"Luxembourg",MO:"Macau SAR China",MK:"Macedonia",MG:"Madagascar",MW:"Malawi",MY:"Malaysia",MV:"Maldives",ML:"Mali",MT:"Malta",MH:"Marshall Islands",MQ:"Martinique",MR:"Mauritania",MU:"Mauritius",YT:"Mayotte",MX:"Mexico",FM:"Micronesia",MD:"Moldova",MC:"Monaco",MN:"Mongolia",ME:"Montenegro",MS:"Montserrat",MA:"Morocco",MZ:"Mozambique",MM:"Myanmar (Burma)",NA:"Namibia",NR:"Nauru",NP:"Nepal",NL:"Netherlands",NC:"New Caledonia",NZ:"New Zealand",NI:"Nicaragua",NE:"Niger",NG:"Nigeria",NU:"Niue",NF:"Norfolk Island",KP:"North Korea",MP:"Northern Mariana Islands",NO:"Norway",OM:"Oman",PK:"Pakistan",PW:"Palau",PS:"Palestinian Territories",PA:"Panama",PG:"Papua New Guinea",PY:"Paraguay",PE:"Peru",PH:"Philippines",PN:"Pitcairn Islands",PL:"Poland",PT:"Portugal",PR:"Puerto Rico",QA:"Qatar",RE:"Réunion",RO:"Romania",RW:"Rwanda",WS:"Samoa",SM:"San Marino",ST:"São Tomé & Príncipe",SA:"Saudi Arabia",SN:"Senegal",RS:"Serbia",SC:"Seychelles",SL:"Sierra Leone",SG:"Singapore",SX:"Sint Maarten",SK:"Slovakia",SI:"Slovenia",SB:"Solomon Islands",SO:"Somalia",ZA:"South Africa",GS:"South Georgia & South Sandwich Islands",KR:"South Korea",SS:"South Sudan",ES:"Spain",LK:"Sri Lanka",BL:"St. Barthélemy",SH:"St. Helena",KN:"St. Kitts & Nevis",LC:"St. Lucia",MF:"St. Martin",PM:"St. Pierre & Miquelon",VC:"St. Vincent & Grenadines",SD:"Sudan",SR:"Suriname",SJ:"Svalbard & Jan Mayen",SZ:"Swaziland",SE:"Sweden",CH:"Switzerland",SY:"Syria",TW:"Taiwan",TJ:"Tajikistan",TZ:"Tanzania",TH:"Thailand",TL:"Timor-Leste",TG:"Togo",TK:"Tokelau",TO:"Tonga",TT:"Trinidad & Tobago",TA:"Tristan da Cunha",TN:"Tunisia",TR:"Turkey",TM:"Turkmenistan",TC:"Turks & Caicos Islands",TV:"Tuvalu",UM:"U.S. Outlying Islands",VI:"U.S. Virgin Islands",UG:"Uganda",UA:"Ukraine",AE:"United Arab Emirates",GB:"United Kingdom",UN:"United Nations",US:"United States",UY:"Uruguay",UZ:"Uzbekistan",VU:"Vanuatu",VA:"Vatican City",VE:"Venezuela",VN:"Vietnam",WF:"Wallis & Futuna",EH:"Western Sahara",YE:"Yemen",ZM:"Zambia",ZW:"Zimbabwe"};for(var n in e){var t=document.createElement("option");t.value=e[n],t.innerHTML=e[n];var i=t.cloneNode(!0);a[0].appendChild(t),a[1].appendChild(i)}}),document.addEventListener("DOMContentLoaded",loaded,!1),function(){"use strict";window.addEventListener("load",function(){var a=document.getElementsByClassName("needs-validation");Array.prototype.filter.call(a,function(e){e.addEventListener("submit",function(a){!1===e.checkValidity()&&(a.preventDefault(),a.stopPropagation()),e.classList.add("was-validated")},!1)})},!1)}()</script>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.4/jquery.fancybox.min.css">
+
+  <style>
+    @import "https://fonts.googleapis.com/css?family=Open+Sans:light,normal&subset=cyrillic";
+    h1,
+    h4,
+    h5 {
+      font-family: "Open Sans", sans-serif;
+    }
+    
+    @font-face {
+      font-family: "Ionicons";
+      src: url("https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.eot?v=2.0.1");
+      src: url("https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.woff?v=2.0.1") format("woff"), url("https://cdn.rawgit.com/ionic-team/ionicons/6811b241/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    .ion-ios-help-outline:before {
+      content: "\f445";
+    }
+    
+    .ion-ios-help-outline {
+      display: inline-block;
+      font-family: "Ionicons";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      text-rendering: auto;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    @media (max-width: 450px) {
+      .container {
+        justify-content: center !important;
+      }
+    }
+    
+    .form-control,
+    .input-group-sm,
+    .container,
+    #thankyou_message {
+      font-family: "Open Sans", sans-serif !important;
+      font-size: 13px !important;
+    }
+    
+    .container {
+      max-width: 400px !important;
+      /*         line-height: 1; */
+    }
+    
+    .was-validated .form-control:valid,
+    .was-validated .form-control:valid:focus,
+    .form-control.is-valid,
+    .was-validated .custom-select:valid,
+    .custom-select.is-valid {
+      border-color: rgb(206, 212, 218);
+    }
+    
+    .was-validated .form-control:invalid,
+    .form-control.is-invalid,
+    .was-validated .custom-select:invalid,
+    .custom-select.is-invalid {
+      border-color: #dc3545 !important;
+      -moz-border-radius: none;
+      -webkit-border-radius: none;
+      -khtml-border-radius: none;
+    }
+    
+    .form-control:focus,
+    .btn:focus,
+    .btn.focus,
+    .fancybox-button:focus,
+    a:focus {
+      outline: none;
+      box-shadow: none !important;
+    }
+    
+    .icon {
+      font-size: 13px;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    
+    .col1 {
+      width: 300px;
+    }
+    
+    #button {
+      width: 170px;
+    }
+    
+    .sumInput {
+      max-width: 75px;
+    }
+    
+    .form-group {
+      margin-bottom: 0.315rem;
+    }
+    
+    select.form-control-sm {
+      height: 28px !important;
+    }
+    
+    select::-ms-expand {
+      display: none;
+    }
+    
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+    }
+    
+    #conditions {
+      color: #9570ba;
+    }
+    
+    #conditions:hover {
+      color: #9570ba;
+    }
+    
+    .icon {
+      color: #212529;
+    }
+    
+    input {
+      color: #212529 !important;
+    }
+    
+    select {
+      color: #6c757d !important;
+    }
+    
+    .text15 {
+      font-size: 15px !important;
+      color: #9570ba !important;
+    }
+    
+    .icon {
+      font-size: 22px;
+    }
+    
+    .btn-outline-dark:not(:disabled):not(.disabled).active,
+    .btn-outline-dark:not(:disabled):not(.disabled).active:hover,
+    .btn-dark:hover,
+    .btn-dark {
+      background-color: #2c2a29;
+      border-color: #2c2a29;
+    }
+    
+    .btn-outline-dark:hover {
+      color: #2c2a29;
+      background-color: white;
+      border-color: #9570ba;
+    }
+    
+    .btn-sm {
+      font-size: 13px;
+    }
+    
+    body {
+      background-color: transparent !important;
+    }
+    
+    .form-check-input {
+      margin-top: 0px;
+      position: static;
+    }
+    
+    label {
+      vertical-align: middle;
+    }
+    
+    .form-control:focus {
+      border-bottom-color: #212529;
+    }
+    
+    input:-ms-input-placeholder {
+      color: #6c757d !important;
+    }
+    
+    .form-check-label,
+    .was-validated .form-check-input:valid + .form-check-label {
+      color: #6c757d;
+    }
+    
+    input:checked + label,
+    .was-validated .form-check-input:valid:checked + .form-check-label {
+      color: #212529;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-start ml-0">
+
+    <form id="gform" class="needs-validation" action="https://money.yandex.ru/quickpay/confirm.xml" target="_blank" method="POST" novalidate>
+
+      <div class="form-group">
+
+        <div id="choiceRow" class="row d-flex justify-content-center">
+          <div class="col1 d-flex justify-content-center">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label name="labelForChoice" class="btn btn-outline-dark btn-sm rounded-0 mr-2 active px-4">
+                <input type="radio" name="choice" value="personal" autocomplete="off" onclick="personal()" checked> Лично
+              </label>
+              <label name="labelForChoice" class="btn btn-outline-dark btn-sm rounded-0 ml-2 px-3">
+                <input type="radio" name="choice" value="estafette" autocomplete="off" onclick="estafeta()"> Эстафета
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="nameRow1" class="row justify-content-center pt-4">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input type="text" name="name" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Имя" required>
+              <div class="invalid-feedback">
+                Пожалуйста, укажите своё имя
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="lastnameRow1" class="row justify-content-center">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input type="text" name="surname" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Фамилия" required>
+              <div class="invalid-feedback">
+                Пожалуйста, укажите свою фамилию
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="birthdayRow1" class="row justify-content-center">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input name="birthday" type="tel" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0 birthday" placeholder="Дата рождения" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-inputmask-max="01/01/2001"
+              data-inputmask-min="01/01/1920" required>
+              <div class="invalid-feedback">
+                Пожалуйста, укажите свою дату рождения
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="cityRow1" class="row justify-content-center">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input type="text" name="city" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Город" required>
+              <div class="invalid-feedback">
+                Пожалуйста, укажите свой город
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="countryRow1" class="row justify-content-center">
+          <div class="col col1">
+            <div class="form-group">
+              <select id="blya" name="country" class="form-control form-control-sm border-top-0 border-left-0 border-right-0 rounded-0 country" onchange="changeSelectColor(this)" required>
+                <option value="">Страна</option>
+                <option value="Russia">Russia</option>
+              </select>
+              <div class="invalid-feedback">
+                Пожалуйста, выберите страну
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="sexRow1" class="row justify-content-center pt-2">
+          <div class="col col1">
+            <div class="form-inline">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" name="radioGroup" type="radio" value="Мужской" id="radioM1" onclick="changeTshirtToMens('tshirtRow1')" required>
+                <label class="form-check-label pr-3" for="radioM1">Мужской</label>
+
+                <input class="form-check-input" name="radioGroup" type="radio" value="Женский" id="radioF1" onclick="changeTshirtToWomens('tshirtRow1')">
+                <label class="form-check-label" for="radioF1">Женский</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="tshirtCheckboxRow1" class="row justify-content-center pt-2">
+          <div class="col col1">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="tshirt" name="tshirt" id="checkTshirt" onclick="showTshirt(this)">
+              <label class="form-check-label pl-1" for="checkTshirt">
+                Добавить футболку
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="tshirtRow1" class="row justify-content-center pt-2 d-none">
+          <div class="col col1 ">
+            <div class="row">
+              <div class="col">
+                <a class="fancybox" href="https://static.wixstatic.com/media/bad037_3c5ff974fbcd4051aae17fad76e9f4d6~mv2.png?dn=M_print_grey.png" data-fancybox>
+                  <img class="img-thumbnail" alt="OnegoSwim Tshirt" src="https://static.wixstatic.com/media/bad037_9a8c04db49f943b6a92000d0ef67e95e~mv2.png?dn=M_print_grey_small.png">
+                </a>
+              </div>
+              <div class="col">
+                <div class="row h-50">
+                  <div class="form-group pr-0 w-100 d-flex">
+                    <select name="size" class="form-control form-control-sm border-top-0 border-left-0 border-right-0 rounded-0" onchange="changeSelectColor(this)">
+                      <option value="">Размер</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                    </select>
+                    <a class="fancybox pl-2 pr-3" href="https://static.wixstatic.com/media/bad037_291e071901474f82ae060dfd21e0e662~mv2.jpg?dn=sizeChartM.jpg" data-fancybox>
+                      <i class="icon ion-ios-help-outline"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="row h-50 d-flex align-items-center">
+                  <span class="text-secondary font-weight-light ml-1" style="font-size: 11px;">
+                  100% Organic ring-spun <br> combed cotton <br><span>155</span> GSM
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="estafetaDiv" class="d-none">
+
+          <div id="nameRow2" class="row justify-content-center pt-4 ">
+            <div class="col col1">
+              <div class="form-group input-group-sm">
+                <input type="text" name="name2" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Имя" required>
+                <div class="invalid-feedback">
+                  Пожалуйста, укажите своё имя
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="lastnameRow2" class="row justify-content-center">
+            <div class="col col1">
+              <div class="form-group input-group-sm">
+                <input type="text" name="surname2" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Фамилия" required>
+                <div class="invalid-feedback">
+                  Пожалуйста, укажите свою фамилию
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="birthdayRow2" class="row justify-content-center">
+            <div class="col col1">
+              <div class="form-group input-group-sm">
+                <input name="birthday2" type="tel" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0 birthday" placeholder="Дата рождения" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-inputmask-max="01/01/2001"
+                data-inputmask-min="01/01/1920" required>
+                <div class="invalid-feedback">
+                  Пожалуйста, укажите свою дату рождения
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cityRow2" class="row justify-content-center">
+            <div class="col col1">
+              <div class="form-group input-group-sm">
+                <input type="text" name="city2" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Город" required>
+                <div class="invalid-feedback">
+                  Пожалуйста, укажите свой город
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="countryRow2" class="row justify-content-center">
+            <div class="col col1">
+              <div class="form-group">
+                <select name="country2" class="form-control form-control-sm border-top-0 border-left-0 border-right-0 rounded-0 country" onchange="changeSelectColor(this)" required>
+                  <option value="">Страна</option>
+                  <option value="Russia">Russia</option>
+                </select>
+                <div class="invalid-feedback">
+                  Пожалуйста, выберите страну
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="sexRow2" class="row justify-content-center pt-2">
+            <div class="col col1">
+              <div class="form-inline">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" name="radioGroup2" type="radio" value="Мужской" id="radioM2" onclick="changeTshirtToMens('tshirtRow2')" required>
+                  <label class="form-check-label pr-3" for="radioM2">Мужской</label>
+
+                  <input class="form-check-input" name="radioGroup2" type="radio" value="Женский" id="radioF2" onclick="changeTshirtToWomens('tshirtRow2')">
+                  <label class="form-check-label" for="radioF2">Женский</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tshirtCheckboxRow2" class="row justify-content-center pt-2">
+            <div class="col col1">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="tshirt" name="tshirt2" id="checkTshirt2" onclick="showTshirt(this)">
+                <label class="form-check-label pl-1" for="checkTshirt2">
+                  Добавить футболку
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div id="tshirtRow2" class="row justify-content-center pt-2 d-none">
+            <div class="col col1 ">
+              <div class="row">
+                <div class="col">
+                  <a class="fancybox" href="https://static.wixstatic.com/media/bad037_3c5ff974fbcd4051aae17fad76e9f4d6~mv2.png?dn=M_print_grey.png" data-fancybox>
+                    <img class="img-thumbnail" alt="OnegoSwim Tshirt" src="https://static.wixstatic.com/media/bad037_9a8c04db49f943b6a92000d0ef67e95e~mv2.png?dn=M_print_grey_small.png">
+                  </a>
+                </div>
+                <div class="col">
+                  <div class="row h-50">
+                    <div class="form-group pr-0 w-100 d-flex">
+                      <select name="size2" class="form-control form-control-sm border-top-0 border-left-0 border-right-0 rounded-0" onchange="changeSelectColor(this)">
+                        <option value="">Размер</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                      </select>
+                      <a class="fancybox pl-2 pr-3" href="https://static.wixstatic.com/media/bad037_291e071901474f82ae060dfd21e0e662~mv2.jpg?dn=sizeChartM.jpg" data-fancybox>
+                        <i class="icon ion-ios-help-outline"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row h-50 d-flex align-items-center">
+                    <span class="text-secondary font-weight-light ml-1" style="font-size: 11px;">
+                  100% Organic ring-spun <br> combed cotton <br><span>155</span> GSM
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="emailRow" class="row justify-content-center mt-4">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input type="email" id="email" name="email" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Email" onblur="createLabel()" required>
+              <div class="invalid-feedback">
+                Пожалуйста, укажите email
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="phoneRow" class="row justify-content-center">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input type="tel" name="phone" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Телефон" data-inputmask="'alias': 'phone'" required>
+              <div class="invalid-feedback">
+                Пожалуйста, укажите свой телефон
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="clubRow" class="row justify-content-center">
+          <div class="col col1">
+            <div class="form-group input-group-sm">
+              <input type="text" name="club" class="form-control simpleInput border-top-0 border-left-0 border-right-0 rounded-0" placeholder="Клуб">
+            </div>
+          </div>
+        </div>
+
+        <div id="finishTimeRow" class="row justify-content-center mb-3">
+          <div class="col col1">
+            <div class="form-group">
+              <select name="finishTime" class="form-control form-control-sm border-top-0 border-left-0 border-right-0 rounded-0" onchange="changeSelectColor(this)" required>
+                <option value="">Finish time distance</option>
+                <option value="17 мин и менее">17 мин и менее</option>
+                <option value="17-18 минут">17-18 минут</option>
+                <option value="18-19 минут">18-19 минут</option>
+                <option value="19-20 минут">19-20 минут</option>
+                <option value="20-21 минута">20-21 минута</option>
+                <option value="21-22 минуты">21-22 минуты</option>
+                <option value="22-23 минуты">22-23 минуты</option>
+              </select>
+              <div class="invalid-feedback">
+                Пожалуйста, выберите предполагаемое время финиша
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="conditionsRow" class="row justify-content-center pt-4">
+          <div class="col col1 pr-0">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="accepted" name="checkCond" id="checkCond" required>
+              <label class="form-check-label pl-1" for="checkCond">
+                С <a id="conditions" href="https://www.iceonego.ru/onegoswim-conditions" target="_blank"> Положением</a> о заплыве ознакомлен<span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="sumRow" class="row justify-content-center mt-3">
+          <div class="col col1">
+            <div class="form-group d-flex justify-content-end pr-0 mb-0 ">
+              <div class="input-group sumInput">
+                <input id="sum" name="sum" type="text" class="form-control bg-white border-0 pr-1 pb-0 font-weight-bold text-right text15" value="1000" readonly onfocus="this.form.paymentType.focus()">
+                <div class="input-group-append">
+                  <span class="input-group-text bg-white border-0 px-0 pb-0 text15">&#x20bd;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="paymentOptionsRow" class="row justify-content-center mb-3">
+          <div class="col col1">
+            <div class="form-group">
+              <select name="paymentType" class="form-control form-control-sm border-top-0 border-left-0 border-right-0 rounded-0" onchange="changeSelectColor(this)" required>
+                <option value="">Способ оплаты</option>
+                <option value="AC">Банковской картой</option>
+                <option value="PC">Яндекс.Деньгами</option>
+              </select>
+              <div class="invalid-feedback">
+                Пожалуйста, выберите способ оплаты
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div name="hiddenFields">
+          <input type="hidden" name="label" id="labelId" value="personal">
+          <input type="hidden" name="receiver" value="410014093370883">
+          <input type="hidden" name="quickpay-form" value="shop">
+          <input type="hidden" name="targets" value="OnegoSwim2018">
+          <input type="hidden" name="need-email" value="false">
+          <input type="hidden" name="successURL" value="https://www.iceonego.ru/dare">
+        </div>
+
+        <div id="buttonRow" class="row d-flex justify-content-center">
+          <div class="col">
+            <button id="button" type="submit" class="btn btn-dark btn-block btn-sm rounded-0 mx-auto">Оплатить</button>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+  <div class="ml-2" id="thankyou_message" style="display: none; max-width:390px;">
+    <p>Если вы видите это сообщение и НЕ были перенаправлены на страницу с оплатой, то напишите, пожалуйста, об этом на hello@iceonego.ru. Спасибо за понимание!</p>
+  </div>
+
+  
+  <script>
+    var price = 1000;
+    var tshirtPrice = 1300;
+    var estafetaPrice = 2000;
+
+    function changeTshirtToWomens(divTshirtID) {
+      var tshirtURLs = $("#" + divTshirtID + " a");
+      var tshirtPic = $("#" + divTshirtID + " img");
+      tshirtPic[0].src = "https://static.wixstatic.com/media/bad037_e47594f0a5244a82948ab47912745097~mv2.png?dn=W_print_grey_small.png";
+      tshirtURLs[0].href = "https://static.wixstatic.com/media/bad037_6b53949a7d364ed485ab85e5d97fab14~mv2.png?dn=W_print_grey.png";
+      tshirtURLs[1].href = "https://static.wixstatic.com/media/bad037_d5ce9737fab74ecda0aa6d08569339ad~mv2.jpg?dn=sizeChartF.jpg";
+      var optionsList = $("#" + divTshirtID + " option");
+      if (optionsList[1].value != "XS") {
+        $("<option value='XS'>XS</option>").insertAfter(optionsList[0]);
+      }
+      if (optionsList.last()[0].value == "XL") {
+        $(optionsList).last().remove();
+      }
+    }
+
+    function changeTshirtToMens(divTshirtID) {
+      var tshirtURLs = $("#" + divTshirtID + " a");
+      var tshirtPic = $("#" + divTshirtID + " img");
+      tshirtPic[0].src =
+        "https://static.wixstatic.com/media/bad037_9a8c04db49f943b6a92000d0ef67e95e~mv2.png?dn=M_print_grey_small.png";
+      tshirtURLs[0].href =
+        "https://static.wixstatic.com/media/bad037_3c5ff974fbcd4051aae17fad76e9f4d6~mv2.png?dn=M_print_grey.png";
+      tshirtURLs[1].href = "https://static.wixstatic.com/media/bad037_291e071901474f82ae060dfd21e0e662~mv2.jpg?dn=sizeChartM.jpg";
+      var optionsList = $("#" + divTshirtID + " option");
+      if (optionsList[1].value === "XS") {
+        $(optionsList[1]).remove();
+      }
+      if (optionsList.last()[0].value != "XL") {
+        $("<option value='XL'>XL</option>").insertAfter(optionsList.last());
+      }
+    }
+
+    function changeSelectColor(select) {
+      if (select.value !== "") {
+        $(select).attr("style", "color:#212529 !important;");
+      } else {
+        $(select).attr("style", "color:none !important;");
+      }
+    }
+
+    
+    
+    function showTshirt($input) {
+      var thsirtDiv = $($input).parents(".row").next(".row");
+      if ($input.checked) {
+        $(thsirtDiv).removeClass("d-none");
+        thsirtDiv.find("select").attr("required", true);
+        $("#sum")[0].value = parseInt($("#sum")[0].value) + tshirtPrice;
+      } else {
+        $(thsirtDiv).addClass("d-none");
+        thsirtDiv.find("select").attr("required", false);
+        $("#sum")[0].value = parseInt($("#sum")[0].value) - tshirtPrice;
+      }
+    }
+
+    function returnRequireAttr() {
+      var list = $("#estafetaDiv .required");
+      for (i = 0; i < list.length; i++) {
+        list[i].setAttribute("required", true);
+        list[i].classList.remove("required");
+      }
+    }
+
+
+    function estafeta() {
+      var labelsForChoice = document.getElementsByName("labelForChoice");
+      if (labelsForChoice[1].classList.contains("active") === false) {
+        labelsForChoice[0].classList.remove("active");
+        labelsForChoice[1].classList.add("active");
+        var estafetaDiv = document.getElementById("estafetaDiv");
+        estafetaDiv.classList.remove("d-none");
+        var span = document.getElementById("conditionsRow").getElementsByTagName("span")[0];
+        span.innerText = "ы";
+        var sum = document.getElementById("sum");
+        sum.value = sum.value - price + estafetaPrice;
+        returnRequireAttr();
+        $("#finishTimeRow").addClass("d-none");
+      }
+    }
+
+    function personal() {
+
+      var labelsForChoice = document.getElementsByName("labelForChoice");
+      if (labelsForChoice[0].classList.contains("active") === false) {
+        var estafetaDiv = document.getElementById("estafetaDiv");
+        estafetaDiv.classList.add("d-none");
+        labelsForChoice[1].classList.remove("active");
+        labelsForChoice[0].classList.add("active");
+        var span = document.getElementById("conditionsRow").getElementsByTagName("span")[0];
+        span.innerText = "";
+        var sum = document.getElementById("sum");
+        sum.value = sum.value - estafetaPrice + price;
+        document.querySelectorAll("#estafetaDiv input[required], #estafetaDiv select[required]");
+        removeRequiredAttr();
+        var checkbox2ndTshirt = document.getElementById("tshirtCheckboxRow2").getElementsByTagName("input")[0];
+        if (checkbox2ndTshirt.checked) {
+          checkbox2ndTshirt.click();
+        }
+        $("#finishTimeRow").removeClass("d-none");
+      }
+    }
+
+    function createLabel() {
+      var email = document.getElementById("email");
+      var label = document.getElementById("labelId");
+      label.value = "ONSW18_" + email.value;
+    }
+
+    function removeRequiredAttr() {
+      var list = $("#estafetaDiv input[required], #estafetaDiv select[required]");
+      for (i = 0; i < list.length; i++) {
+        list[i].removeAttribute("required");
+        list[i].classList.add("required");
+      }
+    }
+    
+    // $(document).ready(function() {
+      
+    // }); 
+    
+    $(document).ready(function() {
+      
+
+      removeRequiredAttr();
+
+      var country = document.getElementsByClassName("country");
+      var countriesJSON = {
+        AF: "Afghanistan",
+        AX: "\u00c5land Islands",
+        AL: "Albania",
+        DZ: "Algeria",
+        AS: "American Samoa",
+        AD: "Andorra",
+        AO: "Angola",
+        AI: "Anguilla",
+        AQ: "Antarctica",
+        AG: "Antigua & Barbuda",
+        AR: "Argentina",
+        AM: "Armenia",
+        AW: "Aruba",
+        AC: "Ascension Island",
+        AU: "Australia",
+        AT: "Austria",
+        AZ: "Azerbaijan",
+        BS: "Bahamas",
+        BH: "Bahrain",
+        BD: "Bangladesh",
+        BB: "Barbados",
+        BY: "Belarus",
+        BE: "Belgium",
+        BZ: "Belize",
+        BJ: "Benin",
+        BM: "Bermuda",
+        BT: "Bhutan",
+        BO: "Bolivia",
+        BA: "Bosnia & Herzegovina",
+        BW: "Botswana",
+        BR: "Brazil",
+        IO: "British Indian Ocean Territory",
+        VG: "British Virgin Islands",
+        BN: "Brunei",
+        BG: "Bulgaria",
+        BF: "Burkina Faso",
+        BI: "Burundi",
+        KH: "Cambodia",
+        CM: "Cameroon",
+        CA: "Canada",
+        IC: "Canary Islands",
+        CV: "Cape Verde",
+        BQ: "Caribbean Netherlands",
+        KY: "Cayman Islands",
+        CF: "Central African Republic",
+        EA: "Ceuta & Melilla",
+        TD: "Chad",
+        CL: "Chile",
+        CN: "China",
+        CX: "Christmas Island",
+        CC: "Cocos (Keeling) Islands",
+        CO: "Colombia",
+        KM: "Comoros",
+        CG: "Congo - Brazzaville",
+        CD: "Congo - Kinshasa",
+        CK: "Cook Islands",
+        CR: "Costa Rica",
+        CI: "C\u00f4te d\u2019Ivoire",
+        HR: "Croatia",
+        CU: "Cuba",
+        CW: "Cura\u00e7ao",
+        CY: "Cyprus",
+        CZ: "Czechia",
+        DK: "Denmark",
+        DG: "Diego Garcia",
+        DJ: "Djibouti",
+        DM: "Dominica",
+        DO: "Dominican Republic",
+        EC: "Ecuador",
+        EG: "Egypt",
+        SV: "El Salvador",
+        GQ: "Equatorial Guinea",
+        ER: "Eritrea",
+        EE: "Estonia",
+        ET: "Ethiopia",
+        EZ: "Eurozone",
+        FK: "Falkland Islands",
+        FO: "Faroe Islands",
+        FJ: "Fiji",
+        FI: "Finland",
+        FR: "France",
+        GF: "French Guiana",
+        PF: "French Polynesia",
+        TF: "French Southern Territories",
+        GA: "Gabon",
+        GM: "Gambia",
+        GE: "Georgia",
+        DE: "Germany",
+        GH: "Ghana",
+        GI: "Gibraltar",
+        GR: "Greece",
+        GL: "Greenland",
+        GD: "Grenada",
+        GP: "Guadeloupe",
+        GU: "Guam",
+        GT: "Guatemala",
+        GG: "Guernsey",
+        GN: "Guinea",
+        GW: "Guinea-Bissau",
+        GY: "Guyana",
+        HT: "Haiti",
+        HN: "Honduras",
+        HK: "Hong Kong SAR China",
+        HU: "Hungary",
+        IS: "Iceland",
+        IN: "India",
+        ID: "Indonesia",
+        IR: "Iran",
+        IQ: "Iraq",
+        IE: "Ireland",
+        IM: "Isle of Man",
+        IL: "Israel",
+        IT: "Italy",
+        JM: "Jamaica",
+        JP: "Japan",
+        JE: "Jersey",
+        JO: "Jordan",
+        KZ: "Kazakhstan",
+        KE: "Kenya",
+        KI: "Kiribati",
+        XK: "Kosovo",
+        KW: "Kuwait",
+        KG: "Kyrgyzstan",
+        LA: "Laos",
+        LV: "Latvia",
+        LB: "Lebanon",
+        LS: "Lesotho",
+        LR: "Liberia",
+        LY: "Libya",
+        LI: "Liechtenstein",
+        LT: "Lithuania",
+        LU: "Luxembourg",
+        MO: "Macau SAR China",
+        MK: "Macedonia",
+        MG: "Madagascar",
+        MW: "Malawi",
+        MY: "Malaysia",
+        MV: "Maldives",
+        ML: "Mali",
+        MT: "Malta",
+        MH: "Marshall Islands",
+        MQ: "Martinique",
+        MR: "Mauritania",
+        MU: "Mauritius",
+        YT: "Mayotte",
+        MX: "Mexico",
+        FM: "Micronesia",
+        MD: "Moldova",
+        MC: "Monaco",
+        MN: "Mongolia",
+        ME: "Montenegro",
+        MS: "Montserrat",
+        MA: "Morocco",
+        MZ: "Mozambique",
+        MM: "Myanmar (Burma)",
+        NA: "Namibia",
+        NR: "Nauru",
+        NP: "Nepal",
+        NL: "Netherlands",
+        NC: "New Caledonia",
+        NZ: "New Zealand",
+        NI: "Nicaragua",
+        NE: "Niger",
+        NG: "Nigeria",
+        NU: "Niue",
+        NF: "Norfolk Island",
+        KP: "North Korea",
+        MP: "Northern Mariana Islands",
+        NO: "Norway",
+        OM: "Oman",
+        PK: "Pakistan",
+        PW: "Palau",
+        PS: "Palestinian Territories",
+        PA: "Panama",
+        PG: "Papua New Guinea",
+        PY: "Paraguay",
+        PE: "Peru",
+        PH: "Philippines",
+        PN: "Pitcairn Islands",
+        PL: "Poland",
+        PT: "Portugal",
+        PR: "Puerto Rico",
+        QA: "Qatar",
+        RE: "R\u00e9union",
+        RO: "Romania",
+        RW: "Rwanda",
+        WS: "Samoa",
+        SM: "San Marino",
+        ST: "S\u00e3o Tom\u00e9 & Pr\u00edncipe",
+        SA: "Saudi Arabia",
+        SN: "Senegal",
+        RS: "Serbia",
+        SC: "Seychelles",
+        SL: "Sierra Leone",
+        SG: "Singapore",
+        SX: "Sint Maarten",
+        SK: "Slovakia",
+        SI: "Slovenia",
+        SB: "Solomon Islands",
+        SO: "Somalia",
+        ZA: "South Africa",
+        GS: "South Georgia & South Sandwich Islands",
+        KR: "South Korea",
+        SS: "South Sudan",
+        ES: "Spain",
+        LK: "Sri Lanka",
+        BL: "St. Barth\u00e9lemy",
+        SH: "St. Helena",
+        KN: "St. Kitts & Nevis",
+        LC: "St. Lucia",
+        MF: "St. Martin",
+        PM: "St. Pierre & Miquelon",
+        VC: "St. Vincent & Grenadines",
+        SD: "Sudan",
+        SR: "Suriname",
+        SJ: "Svalbard & Jan Mayen",
+        SZ: "Swaziland",
+        SE: "Sweden",
+        CH: "Switzerland",
+        SY: "Syria",
+        TW: "Taiwan",
+        TJ: "Tajikistan",
+        TZ: "Tanzania",
+        TH: "Thailand",
+        TL: "Timor-Leste",
+        TG: "Togo",
+        TK: "Tokelau",
+        TO: "Tonga",
+        TT: "Trinidad & Tobago",
+        TA: "Tristan da Cunha",
+        TN: "Tunisia",
+        TR: "Turkey",
+        TM: "Turkmenistan",
+        TC: "Turks & Caicos Islands",
+        TV: "Tuvalu",
+        UM: "U.S. Outlying Islands",
+        VI: "U.S. Virgin Islands",
+        UG: "Uganda",
+        UA: "Ukraine",
+        AE: "United Arab Emirates",
+        GB: "United Kingdom",
+        UN: "United Nations",
+        US: "United States",
+        UY: "Uruguay",
+        UZ: "Uzbekistan",
+        VU: "Vanuatu",
+        VA: "Vatican City",
+        VE: "Venezuela",
+        VN: "Vietnam",
+        WF: "Wallis & Futuna",
+        EH: "Western Sahara",
+        YE: "Yemen",
+        ZM: "Zambia",
+        ZW: "Zimbabwe"
+      };
+
+      for (var el in countriesJSON) {
+        var opt = document.createElement("option");
+        opt.value = countriesJSON[el];
+        opt.innerHTML = countriesJSON[el];
+        var opt2 = opt.cloneNode(true);
+        country[0].appendChild(opt);
+        country[1].appendChild(opt2);
+      }
+    });
+
+    function validateHuman(honeypot) {
+      if (honeypot) {
+        console.log("Robot Detected!");
+        return true;
+      } else {
+        console.log("Welcome Human!");
+      }
+    }
+
+    function getFormData() {
+      var form = document.getElementById("gform");
+      var elements = form.elements;
+      var fields = Object.keys(elements)
+        .map(function(k) {
+          if (elements[k].name !== undefined) {
+            return elements[k].name;
+          } else if (elements[k].length > 0) {
+            return elements[k].item(0).name;
+          }
+        })
+        .filter(function(item, pos, self) {
+          return self.indexOf(item) == pos && item;
+        });
+      var data = {};
+      fields.forEach(function(k) {
+        data[k] = elements[k].value;
+        var str = "";
+        if (elements[k].type === "checkbox") {
+          str = str + elements[k].checked + ", ";
+          data[k] = str.slice(0, -2);
+        } else if (elements[k].length) {
+          for (var i = 0; i < elements[k].length; i++) {
+            if (elements[k].item(i).checked) {
+              str = str + elements[k].item(i).value + ", ";
+              data[k] = str.slice(0, -2);
+            }
+          }
+        }
+      });
+      data.formDataNameOrder = JSON.stringify(fields);
+      data.formGoogleSheetName = form.dataset.sheet || "responses";
+      data.formGoogleSendEmail = form.dataset.email || "";
+      console.log(data);
+      return data;
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      var data = getFormData();
+      /* OPTION: Remove this comment to enable SPAM prevention, see README.md
+          if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
+            return false;
+          }
+          */
+      if (!document.getElementById("gform").checkValidity()) {
+        return false;
+      } else {
+        document.getElementById("gform").submit();
+        var url =
+          "https://script.google.com/macros/s/AKfycbz4hjJyR_LH0pu4NUHEc_lAnUgPcYXMHY8daAZBY5HQuZt11S0L/exec"; //
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+          console.log(xhr.status, xhr.statusText);
+          console.log(xhr.responseText);
+          document.getElementById("gform").style.display = "none";
+          document.getElementById("thankyou_message").style.display = "block";
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              var response = this.responseText;
+            }
+          }
+
+          return;
+        };
+        var encoded = Object.keys(data)
+          .map(function(k) {
+            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+          })
+          .join("&");
+        xhr.send(encoded);
+      }
+    }
+
+    function loaded() {
+      console.log("contact form submission handler loaded successfully");
+      var form = document.getElementById("gform");
+      form.addEventListener("submit", handleFormSubmit, false);
+    }
+    document.addEventListener("DOMContentLoaded", loaded, false);
+
+    (function() {
+      "use strict";
+      window.addEventListener(
+        "load",
+        function() {
+          var forms = document.getElementsByClassName("needs-validation");
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener(
+              "submit",
+              function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add("was-validated");
+              },
+              false
+            );
+          });
+        },
+        false
+      );
+    })();
+  </script>
+</body>
+</html>
