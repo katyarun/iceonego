@@ -118,3 +118,4 @@ function loaded() {
   form.addEventListener("submit", handleFormSubmit, false);
 }
 //document.addEventListener("DOMContentLoaded", loaded, false);
+loaded();
