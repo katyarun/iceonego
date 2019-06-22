@@ -80,7 +80,7 @@ function handleFormSubmit(event) {
 
     document.getElementById("gform").submit();
     var url =
-      "https://script.google.com/macros/s/AKfycbyUy3dtRNVbB03LHrlchqa_dgMEgbX380UdZWm9mBLdne1CX_I/exec"; //
+      "https://script.google.com/macros/s/AKfycbx3EumbgVumY97ywXVuPSbyH1FwqnBbzZs8DwT28YBQZh9ZmoU/exec"; //
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     // xhr.withCredentials = true;
